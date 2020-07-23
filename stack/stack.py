@@ -40,3 +40,4 @@ print(len(FirstStack))
 
 print(FirstStack.storage)
 
+class 
