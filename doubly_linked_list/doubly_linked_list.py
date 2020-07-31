@@ -110,22 +110,6 @@ class DoublyLinkedList:
     def move_to_front(self, node):
         self.delete(node)
         self.add_to_head(node.value)
-        # currentNode = self.head
-        # while self.head != None:
-        #     if self.head.value == value:
-        #         print('first', 'head: ', self.head.value, currentNode.value)
-        #         return
-        #     if currentNode.value != value:
-        #         currentNode = currentNode.next
-        #         print('second: ', currentNode.value)
-        #     if currentNode.value == value:
-        #         print('found it: ', currentNode.value)
-        #         self.head = currentNode
-        #         # self.delete(currentNode)
-        #         printDl()
-        #     else: 
-        #         currentNode = currentNode.next
-        #         print('else: ', currentNode.value)
 
 
         
@@ -137,35 +121,7 @@ class DoublyLinkedList:
         if value is not self.tail:
             self.delete(value)
             self.add_to_tail(value)
-        # currentNode = self.head
-        # while self.head:
-        #     print('CurrentNode initial:', currentNode.value, ' ', 'tail:', self.tail.value)
-        #     # return 
-        #     if self.head.value == value:
-        #         self.tail = self.head
-        #         self.head = self.head.next
-        #         # self.tail = currentNode
-        #         print('TAIL:', self.tail.value, ' ', 'HEAD:', self.head.value, ' ', 'CURRENTNODE VALUE:', currentNode.value)
-        #         break
-            # if currentNode != self.head:
-            #     currentNode = self.head.next
-
-            
-
-            #     self.head = self.head.next
-            #     self.tail.next = None
-            #     print('first', 'head: ', self.head.value, currentNode.value)
-            #     return
-            # if currentNode.value != value:
-            #     currentNode = currentNode.next
-            #     print('second: ', currentNode.value)
-            # if currentNode.value == value:
-            #     print('found it: ', currentNode.value, self.head.value)
-            #     self.tail = currentNode
-            #     # self.delete(currentNode)
-            # else: 
-            #     currentNode = currentNode.next
-            #     print('else: ', currentNode.value)
+       
 
     """
     Deletes the input node from the List, preserving the 
@@ -205,26 +161,37 @@ class DoublyLinkedList:
     in the List.
     """
     def get_max(self):
-        pass
+        current = self.head
+        maxValue = 0
+        while current: 
+            if maxValue < current.value:
+                maxValue = current.value
+            else: 
+                current = current.next
+        print('max: ', maxValue)
+        return maxValue
 
 dl = DoublyLinkedList()
-dl.add_to_head('one')
-dl.add_to_head('two')
-dl.add_to_head('three')
-dl.add_to_head('four')
-dl.add_to_head('five')
+dl.add_to_head(2)
+dl.add_to_head(500)
+dl.add_to_head(10000)
+dl.add_to_head(20)
+dl.add_to_head(32)
+dl.add_to_head(300)
+dl.add_to_head(30)
 
-# dl.remove_from_head()
-# dl.remove_from_head()
+dl.remove_from_head()
+dl.remove_from_head()
 
-# dl.add_to_tail('ten')
-# dl.add_to_tail('eleven')
+dl.add_to_tail(10)
+dl.add_to_tail(11)
 
-# dl.remove_from_tail()
+dl.remove_from_tail()
 
-dl.delete('three')
+dl.delete(30)
 
-# dl.move_to_front('two')
-# dl.move_to_end('five')
+# dl.move_to_front(240)
+dl.move_to_end(139)
+dl.get_max()
 
 printDl()
