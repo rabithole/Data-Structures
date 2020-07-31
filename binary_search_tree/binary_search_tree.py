@@ -17,7 +17,10 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        if self.value == None:
+            self.value = BSTNode(value)
+
+
 
     # Return True if the tree contains the value
     # False if it does not
@@ -60,9 +63,18 @@ class BSTNode:
     def post_order_dft(self):
         pass
 
+class BinarySearchTree:
+    def __init__(self):
+        self.root = None
+
+
+
+
 """
 This code is necessary for testing the `print` methods
 """
+
+
 bst = BinarySearchTree(1)
 
 bst.insert(8)

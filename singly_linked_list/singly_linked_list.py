@@ -5,7 +5,9 @@ class Node:
 		# reference to the next node in the list
 		self.next_node = next_node
 
-	# def get_value(self):
+	def get_value(self):
+		return self.value
+	
 	def __str__(self):
 		return 'The next node value is ' + self.value
 
