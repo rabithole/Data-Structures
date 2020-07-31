@@ -181,17 +181,17 @@ dl.add_to_head(300)
 dl.add_to_head(30)
 
 dl.remove_from_head()
-dl.remove_from_head()
+# dl.remove_from_head()
 
-dl.add_to_tail(10)
-dl.add_to_tail(11)
+# dl.add_to_tail(10)
+# dl.add_to_tail(11)
 
-dl.remove_from_tail()
+# dl.remove_from_tail()
 
-dl.delete(30)
+# dl.delete(30)
 
-# dl.move_to_front(240)
-dl.move_to_end(139)
-dl.get_max()
+# # dl.move_to_front(240)
+# dl.move_to_end(139)
+# dl.get_max()
 
 printDl()
