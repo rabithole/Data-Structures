@@ -9,6 +9,9 @@ return elements in Last In First Out order.
    Make sure the Stack tests pass.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
+   a) A list will use more memory.  
+   b) It will slow down when the size exceeds the allocated memory because it must relocate the stack to another memory location and increase the allocation size. 
+   c) A linked list is slower to access a given value in it's nodes. You must iterate from the beginning until you find the requested value.  
 """
 import sys
 sys.path.append('../singly_linked_list')
