@@ -23,7 +23,7 @@ class Stack:
         self.storage = []
 
     def __str__(self):
-      print(f'\n The length of the list is {len(self.storage)} and here is what is in it {self.storage}\n')
+      print(f'\n The length of the list is {len(self.storage)} and here is what is in it \n{self.storage}\n')
 
     def __len__(self):
         return len(self.storage)
@@ -31,10 +31,10 @@ class Stack:
     def push(self, value):
         self.storage.append(value)
 
-    def pop(self):
+    def pop(self, index):
       if len(self.storage) == 0:
         return None
-      return self.storage.pop()
+      return self.storage.pop(index)
 
 
 
@@ -47,15 +47,15 @@ firstSt.push('how')
 firstSt.push('why')
 firstSt.push('who cares?')
 
-firstSt.__str__()
+# firstSt.__str__()
 
-firstSt.pop()
-firstSt.pop()
-firstSt.pop()
-firstSt.pop()
-firstSt.pop()
+firstSt.pop(-1)
+firstSt.pop(-1)
+firstSt.pop(-1)
+firstSt.pop(-1)
+firstSt.pop(-1)
 
-firstSt.__str__()
+# firstSt.__str__()
 
 
 st1 = LinkedList()
@@ -66,6 +66,6 @@ st1.add_to_tail(4)
 st1.add_to_tail(5)
 st1.add_to_tail(6)
 
-print(st1.head.value)
+# print(st1.head.value)
 
-st1.printList()
+# st1.printList()

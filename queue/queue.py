@@ -36,15 +36,15 @@ class Queue:
 
 inQue = Queue()
 
-inQue.enqueue(f'First in {1}')
+inQue.enqueue(f'Line 39 of Queue {1}')
 inQue.enqueue(2)
 inQue.enqueue(3)
 inQue.enqueue(4)
 inQue.enqueue(5)
 
-inQue.dequeue()
+# inQue.dequeue()
 
-inQue.__str__()
+# inQue.__str__()
 
 
 import sys
@@ -54,12 +54,30 @@ from singly_linked_list import LinkedList
 
 q1 = LinkedList()
 
-q1.add_to_tail(f'First in {1}')
+q1.add_to_tail(f'Line 57 of LinkedList {1}')
 q1.add_to_tail(2)
 q1.add_to_tail(3)
 q1.add_to_tail(4)
 q1.add_to_tail(5)
 
-q1.remove_head()
+# q1.remove_head()
 
-q1.printList()
+# q1.printList()
+
+
+import sys
+sys.path.append('../stack')
+from stack import Stack
+
+
+qSt = Stack()
+
+qSt.push(f'Line 75 of qSt {1}')
+qSt.push(2)
+qSt.push(3)
+
+qSt.__str__()
+
+qSt.pop(0)
+
+qSt.__str__()
