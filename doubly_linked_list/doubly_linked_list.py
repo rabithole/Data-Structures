@@ -101,14 +101,23 @@ class DoublyLinkedList:
     List and inserts it as the new head node of the List.
     """
     def move_to_front(self, node):
-        current = self.head.value
-        if current == node:
-            print('found it at the head')
+        current = self.head
         while current:
-            if current == node:
+            if current.value == node:
+                print('found it')
+                self.add_to_head(current.value)
+                print('current.prev.value\n ', current.prev.value)
+                print('current.next\n ', current.next.value)
+                # print('self.head.prev', self.head.prev.value)
                 current.prev.next = current.next
-                current.next.prev = current.prev
-            current = current.next
+                # current.next = current.prev
+                return 
+            else:
+                print(current.value)
+                current = current.next
+                
+
+
 
         
     """
@@ -139,7 +148,7 @@ class DoublyLinkedList:
             print(currentNode.value)
             currentNode = currentNode.next
         else:
-            print('\nEnd of list \n')
+            print('End of list \n')
             
             
 
@@ -158,16 +167,16 @@ dl.add_to_head('where')
 
 dl.add_to_tail('the end')
 dl.add_to_tail('the next ending')
-dl.add_to_tail('one more end')
+dl.add_to_tail('maybe a new beginning')
 
-dl.remove_from_tail()
-dl.remove_from_tail()
 # dl.remove_from_tail()
 # dl.remove_from_tail()
 # dl.remove_from_tail()
+# dl.remove_from_tail()
+# dl.remove_from_tail()
 
-
+dl.printList()
 # printDl()
-
-dl.move_to_front('where')
+dl.move_to_front(5)
+print('')
 dl.printList()
