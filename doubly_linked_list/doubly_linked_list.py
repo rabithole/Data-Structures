@@ -1,3 +1,14 @@
+print('2d list')
+
+def printDl():
+    currentNode = dl.head
+    while True:
+        if currentNode is not None:
+            print('DL:', currentNode.value, '\n--->', 'LENGTH', dl.length, '\n--->', 'HEAD:', dl.head.value, '\n--->', 'TAIL:', dl.tail.value, '\n'),
+            currentNode = currentNode.next
+        else:
+            # print(dl.tail.value, '--->')
+            break
 """
 Each ListNode holds a reference to its previous node
 as well as its next node in the List.
@@ -27,7 +38,15 @@ class DoublyLinkedList:
     the old head node's previous pointer accordingly.
     """
     def add_to_head(self, value):
-        pass
+        newNode = ListNode(value)
+        if self.head is None and self.tail is None:
+            self.head = newNode
+            self.tail = newNode
+            print('\nadd to head')
+        else:
+            print('else in add to head\n')
+            self.head.prev =  self.head.next
+            self.head = newNode
         
     """
     Removes the List's current head node, making the
@@ -80,3 +99,18 @@ class DoublyLinkedList:
     """
     def get_max(self):
         pass
+
+    def printList(self):
+        while self.head:
+            print('Print', self.head.value)
+            self.head = self.head.next
+
+
+dl = DoublyLinkedList()
+dl.add_to_head(1)
+dl.add_to_head(2)
+dl.add_to_head(3)
+dl.add_to_head(14)
+
+# printDl()
+dl.printList()
